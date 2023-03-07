@@ -1,9 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> APPLY THE FORM </ion-title>
+    <ion-title>
+      RESULTS
+    </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <ion-list>
     <ion-item>
@@ -23,18 +24,18 @@
       <ion-input [(ngModel)]="inputValue"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Fav Car</ion-label>
+      <ion-label>Radio options</ion-label>
       <ion-radio-group [(ngModel)]="selectedOption">
         <ion-item>
-          <ion-label>Peugeot</ion-label>
+          <ion-label>Option 1</ion-label>
           <ion-radio value="option1"></ion-radio>
         </ion-item>
         <ion-item>
-          <ion-label>BMW</ion-label>
+          <ion-label>Option 2</ion-label>
           <ion-radio value="option2"></ion-radio>
         </ion-item>
         <ion-item>
-          <ion-label>Mercedes</ion-label>
+          <ion-label>Option 3</ion-label>
           <ion-radio value="option3"></ion-radio>
         </ion-item>
 
@@ -42,14 +43,11 @@
     </ion-item>
   </ion-list>
 
-  <ion-button expand="block" (click)="showStatus()">Show Status</ion-button>
 
   <ion-item *ngIf="status">
     <ion-label>Status:</ion-label>
     <ion-text>{{ status }}</ion-text>
   </ion-item>
-
-  <ion-button size="default" expand="block" (click)="saveStatus()">Save Status</ion-button>
-  <button (click)="goToNextPage()">Go to next page</button>
+  <ion-button expand="block" (click)="goToSecondPage()">Go back to edit your form</ion-button>
 
 </ion-content>
